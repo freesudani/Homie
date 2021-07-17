@@ -1,6 +1,24 @@
 import React from "react";
 import { FaCartArrowDown } from "react-icons/fa";
-import styled from "styled-components/macro";
+import styled, { keyframes } from "styled-components/macro";
+
+const bump = keyframes`
+0% {
+      transform: scale(1);
+    }
+    10% {
+      transform: scale(0.9);
+    }
+    30% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1);
+    }
+`;
 
 const ButtonCart = styled.button`
   cursor: pointer;
@@ -14,6 +32,8 @@ const ButtonCart = styled.button`
   align-items: center;
   border-radius: 25px;
   font-weight: bold;
+  animation-name: ${bump};
+  animation-duration: 300ms;
 
   &:hover,
   &:active {

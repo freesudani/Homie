@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components/macro";
 import { Link } from "react-router-dom";
-import HomieLogo from "../images/c6da86f670b041b78fb3caeb19d331b5.png";
-import { menuData } from "../data/MenuData";
+import HomieLogo from "../../images/c6da86f670b041b78fb3caeb19d331b5.png";
+import { menuData } from "../../data/MenuData";
 import NavLoggin from "./NavLoggin";
 import CartButton from "./CartButton";
 
