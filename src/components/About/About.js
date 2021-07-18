@@ -14,6 +14,7 @@ const Row = styled.div`
 
 const AboutH = styled.h1`
   font-size: 40px;
+  letter-spacing: 2px;
 `;
 
 const AboutP = styled.p`
@@ -52,7 +53,7 @@ const Img1 = styled.img`
   position: absolute;
   transition: all 0.2s;
   &:hover {
-    outline: 1.5rem solid #1b8bd1;
+    outline: 1rem solid #1b8bd1;
     transform: scale(1.05) translateY(-0.5rem);
     box-shadow: 0 2.5rem 4rem rgba(#000, 0.5);
     z-index: 20;
@@ -66,7 +67,7 @@ const Img2 = styled.img`
   position: absolute;
   transition: all 0.2s;
   &:hover {
-    outline: 1.5rem solid #1b8bd1;
+    outline: 1rem solid #1b8bd1;
     transform: scale(1.05) translateY(-0.5rem);
     box-shadow: 0 2.5rem 4rem rgba(#000, 0.5);
     z-index: 20;
@@ -80,7 +81,7 @@ const Img3 = styled.img`
   position: absolute;
   transition: all 0.2s;
   &:hover {
-    outline: 1.5rem solid #1b8bd1;
+    outline: 1rem solid #1b8bd1;
     transform: scale(1.05) translateY(-0.5rem);
     box-shadow: 0 2.5rem 4rem rgba(#000, 0.5);
     z-index: 20;
