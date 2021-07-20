@@ -5,16 +5,15 @@ import Slider from "react-animated-slider";
 import "react-animated-slider/build/horizontal.css";
 
 const SectionR = styled.div`
-  height: 100vh;
+  height: 70vh;
   width: 100vw;
   margin: 10rem auto;
   max-width: 100%;
-  background: #5d5d5d;
 `;
 
 const SectionRev = styled.div`
   margin: 0 auto;
-  margin-top: 4rem;
+  padding-top: 4rem;
   width: 80vw;
   height: 450px;
   max-width: 800px;
@@ -24,15 +23,7 @@ const SectionRev = styled.div`
   /*  overflow: hidden; */
 `;
 
-const Article = styled.article`
-  position: absolute;
-  top: 10;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  transition: all 0.3s linear;
-`;
+const Article = styled.article``;
 
 const RevImage = styled.img`
   border-radius: 50%;
@@ -67,7 +58,7 @@ function Reviews() {
   return (
     <SectionR>
       <SectionRev>
-        <Slider>
+        <Slider autoplay={3000}>
           {data.map(({ id, image, name, title, quote }) => (
             <Article key={id}>
               <RevImage src={image} alt={name} />
