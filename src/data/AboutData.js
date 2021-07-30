@@ -12,6 +12,6 @@ export const AboutData = [
   {
     title: "Home Appliances",
     Paragraph:
-      "3We've spent hundreds of hours researching appliances, interviewing experts, poring over owner reviews, and testing appliances both large and small—many over the course of several years—to find the best appliances for your kitchen and home. From dishwashers and refrigerators to vacuums and steam cleaners, our experts pick out the right appliances for all kinds of living situations.",
+      "We've spent hundreds of hours researching appliances, interviewing experts, poring over owner reviews, and testing appliances both large and small—many over the course of several years—to find the best appliances for your kitchen and home. From dishwashers and refrigerators to vacuums and steam cleaners, our experts pick out the right appliances for all kinds of living situations.",
   },
 ];

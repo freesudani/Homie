@@ -5,7 +5,7 @@ import Slider from "react-animated-slider";
 import "react-animated-slider/build/horizontal.css";
 
 const SectionR = styled.div`
-  height: 70vh;
+  height: 55vh;
   width: 100vw;
   margin: 10rem auto;
   max-width: 100%;

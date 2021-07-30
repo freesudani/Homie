@@ -12,7 +12,7 @@ const Nav = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  z-index: 100;
+  z-index: 5;
   position: fixed;
   width: 100%;
   background: #fff;
@@ -64,7 +64,6 @@ function Navbar() {
         <img src={HomieLogo} alt="Homie" />
       </Logo>
       <NavLoggin />
-
       <CartButton />
       <MenuBars />
     </Nav>

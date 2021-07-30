@@ -24,8 +24,14 @@ const LogginHeader = styled.span`
   font-weight: bold;
   margin-top: 0.3rem;
 `;
+/* 
+const LogginHandler = () => {
+  setOpenLogginModel(!OpenLogginModel);
+}; */
 
 function NavLoggin() {
+  /* const [OpenLogginModel, setOpenLogginModel] = useState(false); */
+
   return (
     <LogginSec>
       <FaUserCheck />

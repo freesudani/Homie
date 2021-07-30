@@ -52,7 +52,7 @@ const FormInput = styled.input`
     border-bottom: 3px solid #1b8bd1;
   }
   &:focus:invalid {
-    border-bottom: 3px solid #ff7730;
+    border-bottom: 3px solid #b94517;
   }
 
   &::-webkit-input-placeholder {
@@ -86,7 +86,7 @@ const FormTextArea = styled.textarea`
   &:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-    border-bottom: 3px solid #1b8bd1;
+    border-bottom: 3px solid #b94517;
   }
   &:focus:invalid {
     border-bottom: 3px solid #ff7730;
@@ -120,7 +120,7 @@ const ButtonForm = styled.button`
   font-weight: 700;
   cursor: pointer;
   font: inherit;
-  border: none;
+  border: 1px solid #b94517;
   background-color: #1b8bd1;
   color: inherit;
   padding: 0.75rem 1.5rem;
