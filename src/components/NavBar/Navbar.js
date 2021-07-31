@@ -50,7 +50,7 @@ const NavMenuLinks = styled(Link)`
   }
 `;
 
-function Navbar() {
+function Navbar(props) {
   return (
     <Nav>
       <NavMenu>
@@ -63,7 +63,7 @@ function Navbar() {
       <Logo to="/">
         <img src={HomieLogo} alt="Homie" />
       </Logo>
-      <NavLoggin />
+      <NavLoggin buttonClicked={props.buttonClicked} />
       <CartButton />
       <MenuBars />
     </Nav>

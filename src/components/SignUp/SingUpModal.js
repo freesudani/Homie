@@ -53,11 +53,13 @@ const Sbutton = styled.button`
   width: 100%;
   border: none;
   padding: 18px;
+  font: inherit;
+  padding: 0.75rem 1.5rem;
   font-family: inherit;
   cursor: pointer;
   text-transform: uppercase;
-  background: #e8e9ec;
-  color: #777;
+  background-color: #e8e9ec;
+  color: white;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 0;
   letter-spacing: 0.2px;
@@ -65,18 +67,18 @@ const Sbutton = styled.button`
   transition: all 0.3s;
 
   &:hover {
-    background: #d8d8d8;
+    background-color: #133f63;
   }
 
   &:nth-child(2) {
-    background: #2d3b55;
-    color: #fff;
+    background-color: #1b8bd1;
+    color: white;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 4px;
   }
 
   &:hover {
-    background: #3c4d6d;
+    background-color: #133f63;
     border-radius: 3px;
   }
 `;
@@ -91,16 +93,16 @@ const Backdrop = styled.div`
   background: rgba(0, 0, 0, 0.75);
 `;
 
-function SingUpModal() {
+function SingUpModal(props) {
   return (
     <>
-      <Backdrop />
+      <Backdrop onClick={props.buttonClicked} />
       <form
         style={{
           width: "500px",
           margin: "110px auto auto 400px",
           border: "1px solid #000",
-          borderRadius: "3px",
+          borderRadius: "8px",
           position: "fixed",
           zIndex: "100",
           overflow: "hidden",
@@ -122,8 +124,8 @@ function SingUpModal() {
           <Forgot href="#">Forgot Your Password?</Forgot>
         </Content>
         <Action>
-          <Sbutton>Register</Sbutton>
-          <Sbutton>Sign in</Sbutton>
+          <Sbutton onClick={props.buttonClicked}>Register</Sbutton>
+          <Sbutton onClick={props.buttonClicked}>Sign in</Sbutton>
         </Action>
       </form>
     </>

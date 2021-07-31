@@ -24,16 +24,10 @@ const LogginHeader = styled.span`
   font-weight: bold;
   margin-top: 0.3rem;
 `;
-/* 
-const LogginHandler = () => {
-  setOpenLogginModel(!OpenLogginModel);
-}; */
 
-function NavLoggin() {
-  /* const [OpenLogginModel, setOpenLogginModel] = useState(false); */
-
+function NavLoggin(props) {
   return (
-    <LogginSec>
+    <LogginSec onClick={props.buttonClicked}>
       <FaUserCheck />
       <LogginHeader>Log in</LogginHeader>
     </LogginSec>
