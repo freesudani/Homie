@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const Requestdiv = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem;
-  padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  padding: 1rem;
   border-bottom: 1px solid #ccc;
 `;
 
@@ -20,7 +20,7 @@ const Description = styled.div`
 const Price = styled.div`
   margin-top: 0.25rem;
   font-weight: bold;
-  color: #ad5502;
+  color: #b94517;
   font-size: 1.25rem;
 `;
 
@@ -46,8 +46,8 @@ const Forminput = styled.input`
 const Formbutton = styled.button`
   font: inherit;
   cursor: pointer;
-  background-color: #8a2b06;
-  border: 1px solid #8a2b06;
+  background-color: #1b8bd1;
+  border: 1px solid #1b8bd1;
   color: white;
   padding: 0.25rem 2rem;
   border-radius: 20px;
@@ -55,7 +55,7 @@ const Formbutton = styled.button`
 
   &:hover,
   &:active {
-    background-color: #641e03;
+    background-color: #133f63;
     border-color: #641e03;
   }
 `;
@@ -67,21 +67,30 @@ function Request(props) {
         <Hrequest>{props.title}</Hrequest>
         <Description>{props.desc}</Description>
         <Price>{props.price}</Price>
+
+        <form
+          style={{
+            textAlign: "right",
+            display: "grid",
+            gridTemplateRows: "repeat(2, 1fr)",
+            alignItems: "center",
+            justifyItems: "end",
+          }}
+        >
+          <Formdiv>
+            <Formlabel htmlFor={props.title}>Amount</Formlabel>
+            <Forminput
+              id={props.title}
+              type={Number}
+              min={1}
+              max={5}
+              step={1}
+              defaultValue={1}
+            />
+          </Formdiv>
+          <Formbutton onClick={props.button2Clicked}>Add</Formbutton>
+        </form>
       </Requestdiv>
-      <form style={{ textAlign: "right" }}>
-        <Formdiv>
-          <Formlabel htmlFor={props.title}>Amount</Formlabel>
-          <Forminput
-            id={props.title}
-            type={Number}
-            min={1}
-            max={5}
-            step={1}
-            defaultValue={1}
-          />
-        </Formdiv>
-        <Formbutton>Add</Formbutton>
-      </form>
     </>
   );
 }

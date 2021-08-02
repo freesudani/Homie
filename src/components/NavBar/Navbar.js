@@ -64,7 +64,7 @@ function Navbar(props) {
         <img src={HomieLogo} alt="Homie" />
       </Logo>
       <NavLoggin buttonClicked={props.buttonClicked} />
-      <CartButton />
+      <CartButton button2Clicked={props.button2Clicked} />
       <MenuBars />
     </Nav>
   );

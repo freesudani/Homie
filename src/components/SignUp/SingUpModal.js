@@ -99,8 +99,9 @@ function SingUpModal(props) {
       <Backdrop onClick={props.buttonClicked} />
       <form
         style={{
+          marginLeft: "400px",
+          marginTop: "55px",
           width: "500px",
-          margin: "110px auto auto 400px",
           border: "1px solid #000",
           borderRadius: "8px",
           position: "fixed",

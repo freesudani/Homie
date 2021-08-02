@@ -1,6 +1,8 @@
 import React from "react";
 import { FaCartArrowDown } from "react-icons/fa";
 import styled, { keyframes } from "styled-components/macro";
+import { useContext } from "react";
+import CartContext from "../../store/cart-context";
 
 const bump = keyframes`
 0% {
@@ -60,15 +62,33 @@ const Badgecart = styled.span`
   }
 `;
 
-function CartButton() {
+const Totalprice = styled.span`
+  background-color: #b94517;
+  padding: 0.25rem 1rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+  font-weight: bold;
+
+  &:hover,
+  &:active {
+    background-color: #92320c;
+  }
+`;
+
+function CartButton(props) {
+  const cartCtx = useContext(CartContext);
+  const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
+    return curNumber + item.amount;
+  }, 0);
   return (
     <>
-      <ButtonCart>
+      <ButtonCart onClick={props.button2Clicked}>
         <CartIcon>
           <FaCartArrowDown />
         </CartIcon>
         <span>Your Cart</span>
-        <Badgecart>4</Badgecart>
+        <Badgecart>{numberOfCartItems}</Badgecart>
+        <Totalprice>298$</Totalprice>
       </ButtonCart>
     </>
   );
