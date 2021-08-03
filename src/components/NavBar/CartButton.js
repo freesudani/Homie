@@ -80,6 +80,7 @@ function CartButton(props) {
   const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
     return curNumber + item.amount;
   }, 0);
+  const allprices = cartCtx.totalPrice;
   return (
     <>
       <ButtonCart onClick={props.button2Clicked}>
@@ -88,7 +89,7 @@ function CartButton(props) {
         </CartIcon>
         <span>Your Cart</span>
         <Badgecart>{numberOfCartItems}</Badgecart>
-        <Totalprice>298$</Totalprice>
+        <Totalprice>{allprices}$</Totalprice>
       </ButtonCart>
     </>
   );
