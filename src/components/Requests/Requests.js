@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Request from "./Request";
 import { RequestData } from "../../data/RequestData";
 import { FaTimes } from "react-icons/fa";
+import CartContext from "../../store/cart-context";
 
 const Backdrop2 = styled.div`
   position: fixed;
@@ -15,6 +16,15 @@ const Backdrop2 = styled.div`
 `;
 
 function Requests(props) {
+  const cartCtx = useContext(CartContext);
+  const onAddToCartHandler = (amount) => {
+    cartCtx.addItem({
+      id: props.id,
+      title: props.title,
+      price: props.price,
+      amount: amount,
+    });
+  };
   return (
     <>
       <Backdrop2 onClick={props.button2Clicked} />
@@ -41,6 +51,7 @@ function Requests(props) {
             desc={desc}
             price={price}
             button2Clicked={props.button2Clicked}
+            onAddToCart={onAddToCartHandler}
           />
         ))}
       </div>

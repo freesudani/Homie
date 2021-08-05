@@ -89,7 +89,7 @@ function CartButton(props) {
         </CartIcon>
         <span>Your Cart</span>
         <Badgecart>{numberOfCartItems}</Badgecart>
-        <Totalprice>{allprices}$</Totalprice>
+        <Totalprice>{allprices}</Totalprice>
       </ButtonCart>
     </>
   );

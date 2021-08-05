@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 
 const Requestdiv = styled.div`
@@ -61,6 +61,24 @@ const Formbutton = styled.button`
 `;
 
 function Request(props) {
+  const [amountIsValid, setAmountIsValid] = useState(true);
+  const amountInputRef = useRef();
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const eneteredAmount = amountInputRef.current.value;
+    const eneteredAmountNumber = +eneteredAmount;
+
+    if (
+      eneteredAmount.trim().length === 0 ||
+      eneteredAmountNumber < 1 ||
+      eneteredAmountNumber > 5
+    ) {
+      setAmountIsValid(false);
+      return;
+    }
+
+    props.onAddToCart(eneteredAmountNumber);
+  };
   return (
     <>
       <Requestdiv>
@@ -76,6 +94,7 @@ function Request(props) {
             alignItems: "center",
             justifyItems: "end",
           }}
+          onSubmit={submitHandler}
         >
           <Formdiv>
             <Formlabel htmlFor={props.title}>Amount</Formlabel>
@@ -86,9 +105,11 @@ function Request(props) {
               max={5}
               step={1}
               defaultValue={1}
+              ref={amountInputRef}
             />
           </Formdiv>
-          <Formbutton onClick={props.button2Clicked}>Add</Formbutton>
+          <Formbutton>Add</Formbutton>
+          {!amountIsValid && <p>Please enter a valid amount (1-5).</p>}
         </form>
       </Requestdiv>
     </>
