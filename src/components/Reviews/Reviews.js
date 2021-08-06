@@ -5,7 +5,7 @@ import Slider from "react-animated-slider";
 import "react-animated-slider/build/horizontal.css";
 
 const SectionR = styled.div`
-  height: 55vh;
+  height: 60vh;
   width: 100vw;
   margin: 8rem auto 12rem auto;
   max-width: 100%;
@@ -15,7 +15,7 @@ const SectionRev = styled.div`
   margin: 0 auto;
   padding-top: 4rem;
   width: 80vw;
-  height: 450px;
+  height: 460px;
   max-width: 800px;
   text-align: center;
   position: relative;
@@ -50,6 +50,7 @@ const RevText = styled.p`
   max-width: 35em;
   margin: 0 auto;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   line-height: 2;
   color: #000;
 `;

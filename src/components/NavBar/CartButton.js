@@ -62,7 +62,7 @@ const Badgecart = styled.span`
   }
 `;
 
-const Totalprice = styled.span`
+/* const Totalprice = styled.span`
   background-color: #b94517;
   padding: 0.25rem 1rem;
   border-radius: 25px;
@@ -73,14 +73,14 @@ const Totalprice = styled.span`
   &:active {
     background-color: #92320c;
   }
-`;
+`; */
 
 function CartButton(props) {
   const cartCtx = useContext(CartContext);
   const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
     return curNumber + item.amount;
   }, 0);
-  const allprices = cartCtx.totalPrice;
+  /* const allprices = cartCtx.totalPrice; */
   return (
     <>
       <ButtonCart onClick={props.button2Clicked}>
@@ -89,7 +89,7 @@ function CartButton(props) {
         </CartIcon>
         <span>Your Cart</span>
         <Badgecart>{numberOfCartItems}</Badgecart>
-        <Totalprice>{allprices}</Totalprice>
+        {/* <Totalprice>{allprices}</Totalprice> */}
       </ButtonCart>
     </>
   );
